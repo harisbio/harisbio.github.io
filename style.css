@@ -541,6 +541,7 @@ section.alt { background: var(--bg-alt); }
 .bar-fill.amber { background: var(--amber); }
 .bar-fill.soft { background: #9bc9c3; }
 .chart.in .bar-fill { width: var(--w); }
+.chart.wide-labels .bar-row { grid-template-columns: 200px 1fr 80px; }
 
 .chart-note { font-size: 0.8rem; color: var(--ink-faint); margin-top: 8px; }
 
@@ -1293,6 +1294,8 @@ footer p { font-size: 0.86rem; color: var(--on-dark-soft); }
     .poster-grid { grid-template-columns: 1fr; }
     .prog-head { grid-template-columns: 1fr; gap: 6px; }
     .bar-row { grid-template-columns: 96px 1fr 60px; gap: 8px; font-size: 0.8rem; }
+    .chart.wide-labels .bar-row { grid-template-columns: 118px 1fr 72px; }
+    .chart.wide-labels .bar-label { white-space: normal; line-height: 1.25; }
     .fc-stage { aspect-ratio: 4 / 4.2; }
     .carousel-item { width: 220px; height: 150px; }
     .more-strip { height: 200px; }

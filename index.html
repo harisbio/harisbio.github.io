@@ -98,7 +98,7 @@
                     <div class="stat-label">Publications (3 published, 4 under review)</div>
                 </div>
                 <div class="stat-cell">
-                    <div class="stat-num" data-count="4" data-suffix="+">4+</div>
+                    <div class="stat-num" data-count="3.5" data-decimals="1" data-suffix="+">3.5+</div>
                     <div class="stat-label">Years of research experience</div>
                 </div>
                 <div class="stat-cell">
@@ -316,7 +316,7 @@
 
                 <div class="prog-text">
                     <p class="prog-lead" data-reveal>HCM is the most common inherited heart disease, yet it is studied
-                        almost entirely through sarcomere mutations and treated only for its symptoms. I analysed
+                        almost entirely through sarcomere mutations and treated mainly for its symptoms. I analysed
                         myocardial RNA-seq to look for regulation outside the sarcomere, then used protein networks and
                         drug-target databases to ask which of those changes existing drugs could reach.</p>
                     <div class="stat-grid" data-reveal>
@@ -364,8 +364,8 @@
                         <ul>
                             <li><b>Zinc homeostasis is disrupted:</b> the metallothioneins MT1A and MT1M are
                                 downregulated, pointing to impaired mineral absorption.</li>
-                            <li><b>Innate immunity is activated,</b> including neutrophil extracellular trap
-                                formation.</li>
+                            <li><b>Innate immune signalling is dysregulated:</b> FPR1 and FPR2 are downregulated and
+                                neutrophil extracellular trap pathways are enriched.</li>
                             <li><b>Hub genes:</b> FPR1, FPR2, CXCR1, CCR1, SSTR5, EDN2, EDN3, S100A8, S100A9, and
                                 TLR2.</li>
                             <li><b>Repurposing leads:</b> zinc salts (chloride, acetate, sulfate), the FPR antagonists
@@ -449,8 +449,7 @@
                 <div class="prog-text">
                     <p class="prog-lead" data-reveal>Ten AML whole exomes from the Sequence Read Archive, processed end to
                         end in Linux, Galaxy, and R: quality control, alignment to GRCh38, variant calling, functional
-                        annotation, and a novelty screen against dbSNP and ClinVar to isolate variants no database had
-                        reported.</p>
+                        annotation, and a novelty screen to isolate variants absent from dbSNP and ClinVar.</p>
                     <div class="stat-grid" data-reveal>
                         <div class="sg-cell">
                             <div class="sg-num" data-count="10">10</div>
@@ -462,20 +461,20 @@
                         </div>
                         <div class="sg-cell">
                             <div class="sg-num" data-count="884">884</div>
-                            <div class="sg-label">Variants predicted high impact</div>
+                            <div class="sg-label">High-impact annotations (SnpEff)</div>
                         </div>
                         <div class="sg-cell">
                             <div class="sg-num" data-count="399">399</div>
-                            <div class="sg-label">Novel high-impact variants, absent from dbSNP and ClinVar</div>
+                            <div class="sg-label">High-impact variants, all novel (absent from dbSNP and ClinVar)</div>
                         </div>
                     </div>
-                    <div class="chart" data-reveal>
+                    <div class="chart wide-labels" data-reveal>
                         <p class="chart-title">Filtering funnel <em>log scale</em></p>
                         <div class="bar-row"><span class="bar-label">Raw variant calls</span><span class="bar-track"><i
                                     class="bar-fill soft" style="--w:100%"></i></span><span class="bar-val">1,048,062</span></div>
-                        <div class="bar-row"><span class="bar-label">High impact</span><span class="bar-track"><i
+                        <div class="bar-row"><span class="bar-label">High-impact annotations</span><span class="bar-track"><i
                                     class="bar-fill amber" style="--w:48.9%"></i></span><span class="bar-val">884</span></div>
-                        <div class="bar-row"><span class="bar-label">Novel, high impact</span><span class="bar-track"><i
+                        <div class="bar-row"><span class="bar-label">High-impact variants, all novel</span><span class="bar-track"><i
                                     class="bar-fill coral" style="--w:43.2%"></i></span><span class="bar-val">399</span></div>
                         <p class="chart-note">Stop-gained, frameshift, splice-site, and start-loss variants make up the
                             high-impact class.</p>
@@ -495,8 +494,8 @@
                         <ul>
                             <li><b>399 putatively novel</b> SNVs and indels, all predicted high impact, form a shortlist
                                 for functional and clinical validation.</li>
-                            <li><b>Transitions outnumber transversions</b> several fold, the expected mutational
-                                signature for exome data of this kind.</li>
+                            <li><b>Transitions outnumber transversions</b> about 2.4 to 1 (81,357 against 34,602; Ts/Tv
+                                2.35).</li>
                             <li><b>MUC19</b> is the most recurrently hit gene, with six high-impact variants; most other
                                 genes carry one or two.</li>
                             <li>Rainfall analysis flags <b>clustered mutation regions</b> below a 10 kb inter-mutation
@@ -519,8 +518,8 @@
                 <div>
                     <p class="prog-tag">Research synthesis &amp; software</p>
                     <h2 class="prog-title">How has genome-wide gene-family analysis actually been done for 25 years?</h2>
-                    <p class="prog-status"><b>Systematic review and meta-analysis</b> with an open, searchable dataset of every
-                        included study; under review at <b>Genome</b>.</p>
+                    <p class="prog-status"><b>Systematic review and meta-analysis</b> with an open, searchable database of the
+                        screened literature; under review at <b>Genome</b>.</p>
                     <p class="prog-advisors"><span>Advisor</span>
                         <a href="https://scholar.google.com.pk/citations?user=4QP1mQUAAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="fa-brands fa-google-scholar"></i> Prof. Dr. Muhammad Amjad Nawaz <small>National Research Tomsk State University</small></a>
                     </p>
@@ -577,7 +576,7 @@
                 </div>
 
                 <div class="prog-text">
-                    <p class="prog-lead" data-reveal>Genome-wide gene-family studies number in the thousands, but their
+                    <p class="prog-lead" data-reveal>Genome-wide gene-family studies number in the hundreds, but their
                         methods and results are scattered. I screened four databases under PRISMA and extracted each
                         included study into a structured dataset. Doing that by hand was not realistic, so I wrote the
                         PDF extractor and the PGF-Explorer database listed under Software.</p>
@@ -629,8 +628,8 @@
                             <li><b>Crops dominate:</b> wheat (11.9%), rice (5.5%), and tomato (4.8%) lead the primary
                                 organisms.</li>
                             <li><b>WRKY</b> is the most studied family (3.2% of studies).</li>
-                            <li><b>Maximum likelihood is rare:</b> MEGA appears in 91% of studies, IQ-TREE in only
-                                5.8%.</li>
+                            <li><b>Modern model-selection tools are rare:</b> IQ-TREE appears in only 5.8% of studies,
+                                while 91% rely on MEGA.</li>
                             <li>The average study team has <b>7.03 authors</b>.</li>
                             <li>The field's main weaknesses are <b>inconsistent reporting and a lack of methodological
                                     standardization</b>, which the proposed pipeline addresses.</li>
@@ -734,7 +733,7 @@
                     <p class="prog-lead" data-reveal>I synthesised iron oxide nanoparticles with <i>Conocarpus
                             erectus</i> leaf extract, compared them with chemically made ones, and used them to treat
                         textile effluent before irrigating wheat. A public cadmium-stress wheat transcriptome then
-                        explained, at the gene level, how the plants recovered.</p>
+                        mapped the defence pathways wheat activates under cadmium stress.</p>
                     <div class="stat-grid" data-reveal>
                         <div class="sg-cell">
                             <div class="sg-num" data-count="10">10</div>
@@ -799,7 +798,7 @@
     <!-- More work + software -->
     <section id="more">
         <div class="container">
-            <p class="section-label" data-reveal>Also published</p>
+            <p class="section-label" data-reveal>Further work</p>
             <h2 class="section-title" data-reveal>Crop biotechnology and systematic reviews.</h2>
             <p class="section-intro" data-reveal>Two further lines of work that round out the interdisciplinary side of
                 my research.</p>
@@ -830,7 +829,7 @@
                             <div><b>2.0</b>mg/L 2,4-D, optimal</div>
                             <div><b>3</b>stages, callus to plantlet</div>
                         </div>
-                        <a class="chip-link" href="#pub-maize">Published review</a>
+                        <a class="chip-link" href="#pub-maize">Related published review</a>
                     </div>
                 </article>
                 <article class="more-card" data-reveal>
@@ -858,7 +857,7 @@
                             heritability under stress, and the case for combining envirotyping, genomic prediction, and
                             phenomics in future crop improvement.</p>
                         <div class="mini-stats">
-                            <div><b>1,471</b>records screened</div>
+                            <div><b>1,471</b>records identified</div>
                             <div><b>208</b>studies included</div>
                             <div><b>4</b>stress types compared</div>
                         </div>
@@ -882,6 +881,7 @@
                         <p>Automated RNA-seq analysis: differential expression, pathway and PPI analysis, GSEA, and
                             machine learning biomarker discovery.</p>
                         <p class="sw-stack">R &middot; Bash</p>
+                        <span class="sw-na"><i class="fa-regular fa-clock"></i> In testing; public release to follow</span>
                     </div>
                     <div class="sw-tile" data-reveal>
                         <div class="sw-icon"><i class="fa-solid fa-filter"></i></div>
@@ -933,7 +933,7 @@
                     <div><div class="pub-year">2026</div><span class="pub-status status-published">Published</span></div>
                     <div>
                         <h3 class="pub-title">HCMdrugs: A web-based database cataloging the drugs available for the
-                            treatment of hypertrophic cardiomyopathy (HCM)</h3>
+                            treatment of hypertrophic cardiomyopathy</h3>
                         <p class="pub-authors"><b>M. Haris</b>, S. Rahman, M. T. Ul Qamar, F. Azeem*</p>
                         <p class="pub-venue">Journal of Computational Biophysics and Chemistry</p>
                     </div>
@@ -948,7 +948,7 @@
                     <div>
                         <h3 class="pub-title">Plant breeding under environmental uncertainty: A systematic review of
                             challenges in a changing climate</h3>
-                        <p class="pub-authors"><b>M. Haris</b>, T. Shaheen*, M. A. Rashid</p>
+                        <p class="pub-authors"><b>M. Haris</b>, T. Shaheen*, M. A. R. Rashid</p>
                         <p class="pub-venue">New Zealand Journal of Crop and Horticultural Science</p>
                     </div>
                     <div class="pub-side">
@@ -961,7 +961,7 @@
                     <div><div class="pub-year">2025</div><span class="pub-status status-published">Published</span></div>
                     <div>
                         <h3 class="pub-title">Tissue culture optimization: Maize callus induction and factors affecting
-                            callus efficiency</h3>
+                            the callus efficiency</h3>
                         <p class="pub-authors"><b>M. Haris</b>, S. Rasheed, S. Rahman, I. Fatima, A. Mazhar, F. Azeem*
                         </p>
                         <p class="pub-venue">Integrative Plant Biotechnology</p>
@@ -976,9 +976,10 @@
                     <div><div class="pub-year"><i class="fa-regular fa-hourglass-half"></i></div><span
                             class="pub-status status-review">Under review</span></div>
                     <div>
-                        <h3 class="pub-title">Integrative transcriptomics and network medicine identify non-sarcomeric
-                            dysregulated ion homeostasis and innate immunity genes as therapeutic targets in HCM</h3>
-                        <p class="pub-authors"><b>M. Haris</b>, S. Rahman, W. Waheed, M. H. Siddique, F. Azeem*</p>
+                        <h3 class="pub-title">Integrative transcriptomics identified non-sarcomeric dysregulated ion homeostasis
+                            and innate immunity genes as therapeutic targets in hypertrophic cardiomyopathy (HCM)</h3>
+                        <p class="pub-authors"><b>M. Haris</b>, U. A. Ashfaq, W. Waheed, T. Shaheen, M. H. Siddique, S. Rahman,
+                            F. Azeem*</p>
                         <p class="pub-venue">Current Genomics</p>
                     </div>
                     <div class="pub-side"><a class="pub-prog" href="#p-hcm">Project 01</a></div>
@@ -987,8 +988,8 @@
                     <div><div class="pub-year"><i class="fa-regular fa-hourglass-half"></i></div><span
                             class="pub-status status-review">Under review</span></div>
                     <div>
-                        <h3 class="pub-title">Twenty-five years of genome-wide gene family analysis: Trends, tools, and
-                            methodological shifts (a meta-analysis)</h3>
+                        <h3 class="pub-title">Twenty-five years of genome-wide gene family identification analysis in plants:
+                            Trends, tools, and methodological shifts (a systematic review and meta-analysis)</h3>
                         <p class="pub-authors"><b>M. Haris</b>, F. Azeem, K. S. Golokhvast, M. A. Nawaz*</p>
                         <p class="pub-venue">Genome</p>
                     </div>
@@ -1014,7 +1015,8 @@
                         <h3 class="pub-title">Perspectives of plant-microbes and nanotechnology against abiotic stress
                             tolerance under climate change conditions</h3>
                         <p class="pub-authors"><b>M. Haris</b>, T. Shaheen, S. Zahra, M. R. Ansari*</p>
-                        <p class="pub-venue">Royal Society of Chemistry</p>
+                        <p class="pub-venue">Book chapter in Plant-Microbiome Nanobiotechnology: A Gateway to Sustainable
+                            Agriculture (Elsevier)</p>
                     </div>
                     <div class="pub-side"></div>
                 </article>
