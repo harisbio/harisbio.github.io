@@ -1216,3 +1216,5 @@ footer p { font-size: 0.86rem; color: var(--on-dark-soft); }
     .lb-cap { left: 16px; right: 16px; }
     .talk { grid-template-columns: 1fr; gap: 4px; }
 }
+
+.edu-card .prog-advisors { margin-top: 16px; }
