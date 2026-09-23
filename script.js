@@ -22,13 +22,16 @@ const lb = {
     open(items, i = 0) {
         this.items = items;
         this.i = i;
+        this.trigger = document.activeElement;
         this.show();
         this.el.classList.add('open');
         document.body.style.overflow = 'hidden';
+        this.el.querySelector('.lb-close').focus();
     },
     close() {
         this.el.classList.remove('open');
         document.body.style.overflow = '';
+        if (this.trigger && this.trigger.focus) this.trigger.focus();
     },
     step(d) {
         if (this.items.length < 2) return;
@@ -49,6 +52,12 @@ document.addEventListener('keydown', e => {
     if (e.key === 'Escape') lb.close();
     if (e.key === 'ArrowLeft') lb.step(-1);
     if (e.key === 'ArrowRight') lb.step(1);
+    if (e.key === 'Tab') {
+        const btns = [...lb.el.querySelectorAll('button')].filter(b => b.style.display !== 'none');
+        const k = btns.indexOf(document.activeElement);
+        e.preventDefault();
+        btns[(k + (e.shiftKey ? -1 : 1) + btns.length) % btns.length].focus();
+    }
 });
 
 // ---- Figure carousels ----
@@ -196,3 +205,16 @@ document.querySelectorAll('.pf-btn').forEach(btn => {
         onScroll();
     }));
 })();
+
+// ---- Keyboard access for clickable photos and figures ----
+document.querySelectorAll('.carousel-item:not([aria-hidden="true"]), .fc-img').forEach(el => {
+    el.tabIndex = 0;
+    el.setAttribute('role', 'button');
+    if (!el.getAttribute('aria-label')) {
+        const img = el.querySelector('img');
+        el.setAttribute('aria-label', 'Enlarge: ' + (img && img.alt ? img.alt : 'image'));
+    }
+    el.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+});
