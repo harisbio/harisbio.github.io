@@ -417,6 +417,44 @@ section.alt { background: var(--bg-alt); }
 .prog-status { font-size: 0.92rem; color: var(--ink-faint); }
 .prog-status b { color: var(--ink-soft); font-weight: 600; }
 
+/* Advisors with Google Scholar links */
+.prog-advisors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 10px;
+    margin-top: 14px;
+}
+
+.more-body .prog-advisors { margin: -2px 0 14px; }
+
+.prog-advisors > span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-right: 2px;
+}
+
+.prog-advisors a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 13px 5px 11px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: #fff;
+    color: var(--ink);
+    font-size: 0.86rem;
+    font-weight: 500;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.prog-advisors a i { color: #4285f4; }
+.prog-advisors a small { color: var(--ink-faint); font-weight: 400; font-size: 0.8rem; }
+.prog-advisors a:hover { border-color: var(--accent); color: var(--accent); }
+
 .prog-grid {
     display: grid;
     grid-template-columns: 1.15fr 1fr;

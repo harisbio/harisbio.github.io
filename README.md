@@ -6,7 +6,7 @@ Live site: https://harisbio.github.io
 
 ## What is on the site
 
-- Four research programs, each presented through its own figures and numbers: transcriptomics and network medicine in hypertrophic cardiomyopathy, exome variant discovery in acute myeloid leukemia, a 25-year meta-analysis of gene-family studies, and nanoparticle treatment of textile wastewater.
+- Four research projects, each presented through its own figures and numbers: transcriptomics and network medicine in hypertrophic cardiomyopathy, exome variant discovery in acute myeloid leukemia, a 25-year meta-analysis of gene-family studies, and nanoparticle treatment of textile wastewater.
 - Publications, software and databases, education, research experience, skills, honors, and talks.
 
 ## Structure
